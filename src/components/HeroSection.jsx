@@ -84,7 +84,7 @@ function HeroSection() {
       <div className="bg-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4 md:mb-8 text-[#201E3E]">Welcome to Mahatma Gandhi Higher Secondary School</h2>
-          <p className="text-sm sm:text-base text-gray-700 text-center max-w-3xl mx-auto px-2">
+          <p className="text-lg sm:text-base text-gray-700 text-center max-w-7xl mx-auto px-2">
             Welcome to Mahatma Gandhi Higher Secondary School (MGHSS), Baisinga — a distinguished institution dedicated to academic excellence and holistic development. Established in 1988, MGHSS has grown from its humble beginnings to become a beacon of learning, guided by Gandhian values. With a nurturing environment, committed faculty, and well-rounded educational programs, the school empowers students to achieve their dreams and contribute meaningfully to society. Situated amidst the serene beauty of Mayurbhanj, MGHSS stands as a symbol of knowledge, integrity, and progress.
           </p>
         </div>

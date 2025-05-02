@@ -196,7 +196,7 @@ function Footer() {
               <div className="h-full w-full flex items-center justify-center text-center">
                 <p className="text-sm">
                   <span className="block mb-2">Interactive Map</span>
-                  <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="text-[#E46A16] hover:underline">
+                  <a href="https://www.google.com/maps/place/Mahatma+Gandhi+Mahavidyalaya/@21.6668973,86.9127673,12z/data=!4m6!3m5!1s0x3a1cf81bfe1ffe99:0xf8216fc3b45c8e82!8m2!3d21.6423711!4d86.9174119!16s%2Fg%2F119w_rsg0?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-[#E46A16] hover:underline">
                     View on Google Maps
                   </a>
                 </p>

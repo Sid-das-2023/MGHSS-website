@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 // Import your campus images
-import collegeImage from '../assets/images/Block Level Winer Dance Group.jpg';
-import campus1 from '../assets/images/campus1.jpeg'; // Add your actual campus images
-import campus2 from '../assets/images/campus2.jpeg'; // Add your actual campus images
+import collegeImage from '../assets/images/college.webp';
+import campus1 from '../assets/images/campus1.avif'; // Add your actual campus images
+import campus2 from '../assets/images/campus2.avif'; // Add your actual campus images
 import campus3 from '../assets/images/campus3.jpeg'; // Add your actual campus images
 
 function AboutUs() {
@@ -43,11 +43,11 @@ function AboutUs() {
 
       <div className="py-12 md:py-16">
         <div className="lg:mx-12 sm:mx-4 px-4">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-[#201E3E] text-center">Our History, Mission, and Vision</h2>
+          <h2 className="text-2xl md:text-2xl lg:text-4xl font-bold mb-8 text-[#201E3E] text-center">Our History, Mission, and Vision</h2>
           <div className="flex flex-col-reverse md:flex-row gap-10 md:gap-12 max-w-10xl mx-auto">
             {/* Text content on the left for desktop (but below on mobile) */}
             <div className="md:w-3/5">
-              <p className="mb-5 text-gray-700 text-base md:text-lg lg:text-xl">
+              <p className="mb-5 text-gray-700 text-base md:text-sm lg:text-xl">
                 Mahatma Gandhi Higher Secondary School (formerly Mahatma Gandhi Junior College), Baisinga is a shining symbol of knowledge 
                 and progress in Mayurbhanj. Established in 1988 as Mahatma Gandhi Mahavidyalaya, the institution was born from the 
                 aspirations of the local community. What began as a dream soon transformed into reality, inspiring generations of learners.

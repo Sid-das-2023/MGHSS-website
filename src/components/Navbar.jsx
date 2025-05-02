@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 
 function Navbar() {
   const [alertPosition, setAlertPosition] = useState(100);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState({});
+  const [activeDropdown, setActiveDropdown] = useState(null);
   const location = useLocation();
+  const timeoutRef = useRef(null);
   
   useEffect(() => {
     const interval = setInterval(() => {
@@ -24,6 +27,7 @@ function Navbar() {
   const scrollToSection = (sectionId) => {
     // Close mobile menu if open
     setMobileMenuOpen(false);
+    setDropdownOpen({});
     
     // If we're already on the homepage
     if (location.pathname === '/') {
@@ -36,6 +40,58 @@ function Navbar() {
       window.location.href = `/#${sectionId}`;
     }
   };
+
+  const toggleDropdown = (menu) => {
+    setDropdownOpen(prev => ({
+      ...prev,
+      [menu]: !prev[menu]
+    }));
+  };
+  
+  const closeAllDropdowns = () => {
+    setDropdownOpen({});
+  };
+
+  // Handlers for desktop hover behavior with delay
+  const handleMouseEnter = (menu) => {
+    // Only set active dropdown on desktop (non-mobile) view
+    if (window.innerWidth >= 768) {
+      // Clear any existing timeout
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+      }
+      setActiveDropdown(menu);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    // Only clear active dropdown on desktop (non-mobile) view with delay
+    if (window.innerWidth >= 768) {
+      // Set a timeout to delay the closing of the dropdown
+      timeoutRef.current = setTimeout(() => {
+        setActiveDropdown(null);
+        timeoutRef.current = null;
+      }, 500); // 500ms delay before closing the dropdown
+    }
+  };
+
+  // Function to keep dropdown open when hovering the dropdown itself
+  const handleDropdownMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+  };
+
+  // Clean up timeouts on unmount
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   return (
     <>
@@ -69,8 +125,8 @@ function Navbar() {
           {/* Social Media Links */}
           <div className="flex items-center">
             <div className="flex space-x-3">
-              {/* Facebook */}
-              <a href="#" className="text-gray-300 hover:text-[#E46A16] transition-colors">
+              {/* Facebook - using the actual link from content file */}
+              <a href="https://www.facebook.com/mg.mahavidyalaya" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#E46A16] transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
                 </svg>
@@ -83,18 +139,19 @@ function Navbar() {
                 </svg>
               </a>
               
-              {/* Twitter/X */}
-              <a href="#" className="text-gray-300 hover:text-black transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
-                </svg>
-              </a>
-              
               {/* YouTube */}
               <a href="#" className="text-gray-300 hover:text-red-600 transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
                 </svg>
+              </a>
+              
+              {/* Contact Info */}
+              <a href="tel:+919937135791" className="text-gray-300 hover:text-green-500 transition-colors flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span className="hidden md:inline">Contact</span>
               </a>
             </div>
           </div>
@@ -118,69 +175,212 @@ function Navbar() {
           
           {/* Menu items */}
           <ul className={`${mobileMenuOpen ? 'flex' : 'hidden'} md:flex flex-col md:flex-row md:justify-center md:space-x-6 space-y-2 md:space-y-0 py-3 md:py-4`}>
-            <li>
-              <button 
-                onClick={() => scrollToSection('about-us')} 
+            <li className="relative">
+              <Link 
+                to="/"
+                onClick={closeAllDropdowns}
                 className="text-left w-full text-gray-100 hover:text-[#E46A16] transition duration-300 uppercase font-weight-500 block py-1 md:py-0"
               >
-                About Us
-              </button>
+                Home
+              </Link>
             </li>
-            <li>
-              <button 
-                onClick={() => scrollToSection('admissions')} 
-                className="text-left w-full text-gray-100 hover:text-[#E46A16] transition duration-300 uppercase font-weight-500 block py-1 md:py-0"
+            
+            <li 
+              className="relative"
+              onMouseEnter={() => handleMouseEnter('about')} 
+              onMouseLeave={handleMouseLeave}
+            >
+              <div className="flex items-center justify-between">
+                <button 
+                  onClick={() => scrollToSection('about-us')} 
+                  className="text-left text-gray-100 hover:text-[#E46A16] transition duration-300 uppercase font-weight-500 block py-1 md:py-0"
+                >
+                  About Us
+                </button>
+                <button 
+                  className="md:hidden ml-2 text-gray-100"
+                  onClick={() => toggleDropdown('about')}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={dropdownOpen.about ? "M5 15l7-7 7 7" : "M19 9l-7 7-7-7"} />
+                  </svg>
+                </button>
+              </div>
+              
+              {/* Dropdown for both mobile (click) and desktop (hover) */}
+              <div 
+                className={`md:absolute md:left-0 md:mt-2 md:w-48 md:bg-[#B14770] md:rounded md:shadow-lg md:z-20 
+                  ${dropdownOpen.about ? 'block' : 'hidden'} 
+                  ${activeDropdown === 'about' ? 'md:block' : 'md:hidden'}`}
+                onMouseEnter={handleDropdownMouseEnter}
+                onMouseLeave={handleMouseLeave}
               >
-                Admissions
-              </button>
+                <div className="py-1 space-y-1 pl-4 md:pl-0">
+                  <a href="#history" className="block px-4 py-2 text-gray-100 md:text-gray-100 hover:text-[#E46A16]">History & Vision</a>
+                  <a href="#principal" className="block px-4 py-2 text-gray-100 md:text-gray-100 hover:text-[#E46A16]">Principal's Message</a>
+                  <a href="#campus" className="block px-4 py-2 text-gray-100 md:text-gray-100 hover:text-[#E46A16]">Campus Tour</a>
+                </div>
+              </div>
             </li>
-            <li>
-              <button 
-                onClick={() => scrollToSection('academics')} 
-                className="text-left w-full text-gray-100 hover:text-[#E46A16] transition duration-300 uppercase font-weight-500 block py-1 md:py-0"
+            
+            <li 
+              className="relative"
+              onMouseEnter={() => handleMouseEnter('academics')} 
+              onMouseLeave={handleMouseLeave}
+            >
+              <div className="flex items-center justify-between">
+                <button 
+                  onClick={() => scrollToSection('academics')} 
+                  className="text-left text-gray-100 hover:text-[#E46A16] transition duration-300 uppercase font-weight-500 block py-1 md:py-0"
+                >
+                  Academics
+                </button>
+                <button 
+                  className="md:hidden ml-2 text-gray-100"
+                  onClick={() => toggleDropdown('academics')}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={dropdownOpen.academics ? "M5 15l7-7 7 7" : "M19 9l-7 7-7-7"} />
+                  </svg>
+                </button>
+              </div>
+              
+              <div 
+                className={`md:absolute md:left-0 md:mt-2 md:w-48 md:bg-[#B14770] md:rounded md:shadow-lg md:z-20 
+                  ${dropdownOpen.academics ? 'block' : 'hidden'} 
+                  ${activeDropdown === 'academics' ? 'md:block' : 'md:hidden'}`}
+                onMouseEnter={handleDropdownMouseEnter}
+                onMouseLeave={handleMouseLeave}
               >
-                Academics
-              </button>
+                <div className="py-1 space-y-1 pl-4 md:pl-0">
+                  <a href="#programs" className="block px-4 py-2 text-gray-100 md:text-gray-100 hover:text-[#E46A16]">Programs</a>
+                  <a href="#faculty" className="block px-4 py-2 text-gray-100 md:text-gray-100 hover:text-[#E46A16]">Faculty</a>
+                  <a href="#curriculum" className="block px-4 py-2 text-gray-100 md:text-gray-100 hover:text-[#E46A16]">Curriculum</a>
+                </div>
+              </div>
             </li>
-            <li>
-              <button 
-                onClick={() => scrollToSection('research')} 
-                className="text-left w-full text-gray-100 hover:text-[#E46A16] transition duration-300 uppercase font-weight-500 block py-1 md:py-0"
+            
+            <li 
+              className="relative"
+              onMouseEnter={() => handleMouseEnter('admissions')} 
+              onMouseLeave={handleMouseLeave}
+            >
+              <div className="flex items-center justify-between">
+                <button 
+                  onClick={() => scrollToSection('admissions')} 
+                  className="text-left text-gray-100 hover:text-[#E46A16] transition duration-300 uppercase font-weight-500 block py-1 md:py-0"
+                >
+                  Admissions
+                </button>
+                <button 
+                  className="md:hidden ml-2 text-gray-100"
+                  onClick={() => toggleDropdown('admissions')}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={dropdownOpen.admissions ? "M5 15l7-7 7 7" : "M19 9l-7 7-7-7"} />
+                  </svg>
+                </button>
+              </div>
+              
+              <div 
+                className={`md:absolute md:left-0 md:mt-2 md:w-48 md:bg-[#B14770] md:rounded md:shadow-lg md:z-20 
+                  ${dropdownOpen.admissions ? 'block' : 'hidden'} 
+                  ${activeDropdown === 'admissions' ? 'md:block' : 'md:hidden'}`}
+                onMouseEnter={handleDropdownMouseEnter}
+                onMouseLeave={handleMouseLeave}
               >
-                Research
-              </button>
+                <div className="py-1 space-y-1 pl-4 md:pl-0">
+                  <a href="#eligibility" className="block px-4 py-2 text-gray-100 md:text-gray-100 hover:text-[#E46A16]">Eligibility</a>
+                  <a href="#fees" className="block px-4 py-2 text-gray-100 md:text-gray-100 hover:text-[#E46A16]">Fees & Scholarships</a>
+                  <a href="#apply" className="block px-4 py-2 text-gray-100 md:text-gray-100 hover:text-[#E46A16]">Apply Online</a>
+                  <a href="#faq" className="block px-4 py-2 text-gray-100 md:text-gray-100 hover:text-[#E46A16]">FAQs</a>
+                </div>
+              </div>
             </li>
-            <li>
-              <button 
-                onClick={() => scrollToSection('facilities')} 
-                className="text-left w-full text-gray-100 hover:text-[#E46A16] transition duration-300 uppercase font-weight-500 block py-1 md:py-0"
+            
+            <li 
+              className="relative"
+              onMouseEnter={() => handleMouseEnter('campus')} 
+              onMouseLeave={handleMouseLeave}
+            >
+              <div className="flex items-center justify-between">
+                <button 
+                  onClick={() => scrollToSection('facilities')} 
+                  className="text-left text-gray-100 hover:text-[#E46A16] transition duration-300 uppercase font-weight-500 block py-1 md:py-0"
+                >
+                  Campus Life
+                </button>
+                <button 
+                  className="md:hidden ml-2 text-gray-100"
+                  onClick={() => toggleDropdown('campus')}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={dropdownOpen.campus ? "M5 15l7-7 7 7" : "M19 9l-7 7-7-7"} />
+                  </svg>
+                </button>
+              </div>
+              
+              <div 
+                className={`md:absolute md:left-0 md:mt-2 md:w-48 md:bg-[#B14770] md:rounded md:shadow-lg md:z-20 
+                  ${dropdownOpen.campus ? 'block' : 'hidden'} 
+                  ${activeDropdown === 'campus' ? 'md:block' : 'md:hidden'}`}
+                onMouseEnter={handleDropdownMouseEnter}
+                onMouseLeave={handleMouseLeave}
               >
-                Facilities
-              </button>
+                <div className="py-1 space-y-1 pl-4 md:pl-0">
+                  <a href="#hostel" className="block px-4 py-2 text-gray-100 md:text-gray-100 hover:text-[#E46A16]">Hostel</a>
+                  <a href="#sports" className="block px-4 py-2 text-gray-100 md:text-gray-100 hover:text-[#E46A16]">Sports</a>
+                  <a href="#clubs" className="block px-4 py-2 text-gray-100 md:text-gray-100 hover:text-[#E46A16]">Student Clubs</a>
+                  <a href="#library" className="block px-4 py-2 text-gray-100 md:text-gray-100 hover:text-[#E46A16]">Library</a>
+                </div>
+              </div>
             </li>
-            <li>
-              <button 
-                onClick={() => scrollToSection('examination')} 
-                className="text-left w-full text-gray-100 hover:text-[#E46A16] transition duration-300 uppercase font-weight-500 block py-1 md:py-0"
+            
+            <li 
+              className="relative"
+              onMouseEnter={() => handleMouseEnter('events')} 
+              onMouseLeave={handleMouseLeave}
+            >
+              <div className="flex items-center justify-between">
+                <button 
+                  onClick={() => scrollToSection('events')} 
+                  className="text-left text-gray-100 hover:text-[#E46A16] transition duration-300 uppercase font-weight-500 block py-1 md:py-0"
+                >
+                  Events & News
+                </button>
+                <button 
+                  className="md:hidden ml-2 text-gray-100"
+                  onClick={() => toggleDropdown('events')}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={dropdownOpen.events ? "M5 15l7-7 7 7" : "M19 9l-7 7-7-7"} />
+                  </svg>
+                </button>
+              </div>
+              
+              <div 
+                className={`md:absolute md:left-0 md:mt-2 md:w-48 md:bg-[#B14770] md:rounded md:shadow-lg md:z-20 
+                  ${dropdownOpen.events ? 'block' : 'hidden'} 
+                  ${activeDropdown === 'events' ? 'md:block' : 'md:hidden'}`}
+                onMouseEnter={handleDropdownMouseEnter}
+                onMouseLeave={handleMouseLeave}
               >
-                Examination
-              </button>
+                <div className="py-1 space-y-1 pl-4 md:pl-0">
+                  <a href="#upcoming" className="block px-4 py-2 text-gray-100 md:text-gray-100 hover:text-[#E46A16]">Upcoming Events</a>
+                  <a href="#newsletter" className="block px-4 py-2 text-gray-100 md:text-gray-100 hover:text-[#E46A16]">Newsletter</a>
+                  <a href="#gallery" className="block px-4 py-2 text-gray-100 md:text-gray-100 hover:text-[#E46A16]">Gallery</a>
+                </div>
+              </div>
             </li>
-            <li>
-              <button 
-                onClick={() => scrollToSection('placement')} 
+            
+            <li className="relative">
+              <Link 
+                to="/contact"
+                onClick={closeAllDropdowns}
                 className="text-left w-full text-gray-100 hover:text-[#E46A16] transition duration-300 uppercase font-weight-500 block py-1 md:py-0"
               >
-                Placement
-              </button>
-            </li>
-            <li>
-              <button 
-                onClick={() => scrollToSection('others')} 
-                className="text-left w-full text-gray-100 hover:text-[#E46A16] transition duration-300 uppercase font-weight-500 block py-1 md:py-0"
-              >
-                Others
-              </button>
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
