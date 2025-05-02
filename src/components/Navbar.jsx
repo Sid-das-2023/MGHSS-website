@@ -51,7 +51,7 @@ function Navbar() {
       </div>
       
       {/* College Header Section */}
-      <div className="bg-[#201E3E] py-4 border-b">
+      <div className="bg-[#201E3E] py-6 border-b">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4 space-y-3 md:space-y-0">
           {/* College Logo and Name */}
           <div className="flex items-center">
