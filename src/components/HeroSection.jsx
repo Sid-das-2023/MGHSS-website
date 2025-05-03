@@ -83,8 +83,8 @@ function HeroSection() {
 
       <div className="bg-white py-8 md:py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4 md:mb-8 text-[#201E3E]">Welcome to Mahatma Gandhi Higher Secondary School</h2>
-          <p className="text-lg sm:text-base text-gray-700 text-center max-w-7xl mx-auto px-2">
+          <h2 className="text-2xl lg:text-4xl font-bold text-center mb-4 md:mb-8 text-[#201E3E]">Welcome to Mahatma Gandhi Higher Secondary School</h2>
+          <p className="text-base lg:text-xl text-gray-700 text-center max-w-7xl mx-auto px-2">
             Welcome to Mahatma Gandhi Higher Secondary School (MGHSS), Baisinga — a distinguished institution dedicated to academic excellence and holistic development. Established in 1988, MGHSS has grown from its humble beginnings to become a beacon of learning, guided by Gandhian values. With a nurturing environment, committed faculty, and well-rounded educational programs, the school empowers students to achieve their dreams and contribute meaningfully to society. Situated amidst the serene beauty of Mayurbhanj, MGHSS stands as a symbol of knowledge, integrity, and progress.
           </p>
         </div>
@@ -92,27 +92,27 @@ function HeroSection() {
 
       <div className="bg-[#E46A16] py-8 md:py-10 text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 md:mb-8">Quick Facts</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8">Quick Facts</h2>
           <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-10 md:gap-16">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold">1988</div>
               <p className="mt-1 sm:mt-2 text-xs sm:text-sm">Established</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold">95%</div>
-              <p className="mt-1 sm:mt-2 text-xs sm:text-sm">Placement Rate</p>
+              <div className="text-3xl md:text-4xl font-bold">256</div>
+              <p className="mt-1 sm:mt-2 text-xs sm:text-sm">Arts Stream Seats</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold">200+</div>
-              <p className="mt-1 sm:mt-2 text-xs sm:text-sm">Global Partner Universities</p>
+              <div className="text-3xl md:text-4xl font-bold">64</div>
+              <p className="mt-1 sm:mt-2 text-xs sm:text-sm">Science Stream Seats</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold">45</div>
-              <p className="mt-1 sm:mt-2 text-xs sm:text-sm">Research Centers</p>
+              <div className="text-3xl md:text-4xl font-bold">18</div>
+              <p className="mt-1 sm:mt-2 text-xs sm:text-sm">Staff Members</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold">18:1</div>
-              <p className="mt-1 sm:mt-2 text-xs sm:text-sm">Student-Faculty Ratio</p>
+              <div className="text-3xl md:text-4xl font-bold">20km</div>
+              <p className="mt-1 sm:mt-2 text-xs sm:text-sm">From Balasore</p>
             </div>
           </div>
         </div>

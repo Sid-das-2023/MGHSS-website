@@ -1,10 +1,12 @@
 import React from 'react';
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
+  
   return (
     <footer className="bg-[#201E3E] pt-12 pb-6 text-gray-300">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
           {/* Contact Information */}
           <div>
             <h3 className="text-xl font-semibold text-white mb-4 border-b border-[#E46A16] pb-2 inline-block">Contact Us</h3>
@@ -16,53 +18,45 @@ function Footer() {
                 </svg>
                 <div>
                   <p>Mahatma Gandhi Higher Secondary School</p>
-                  <p>Baisinga, Mayurbhanj</p>
-                  <p>Odisha - 757055</p>
+                  <p>At/Po- Baisinga</p>
+                  <p>Dist- Mayurbhanj</p>
+                  <p>Odisha- 757028</p>
                 </div>
               </li>
               <li className="flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#E46A16] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <span>+91 7978042992</span>
+                <span>+91 9937135791</span>
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center mt-1">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#E46A16] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <span>info@mghss.edu.in</span>
+                <span>+91 7978042992 (Principal)</span>
               </li>
             </ul>
             
-            {/* Social Media Links */}
+            {/* Social Media Links - Only include the Facebook link from the text file */}
             <div className="mt-5">
               <h4 className="text-white font-medium mb-3">Connect With Us:</h4>
               <div className="flex space-x-4">
-                <a href="#" className="text-gray-300 hover:text-[#E46A16] transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <a 
+                  href="https://www.facebook.com/mg.mahavidyalaya" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-gray-300 hover:text-[#E46A16] transition-colors"
+                  aria-label="Facebook page"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
-                  </svg>
-                </a>
-                <a href="#" className="text-gray-300 hover:text-pink-600 transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                  </svg>
-                </a>
-                <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
-                  </svg>
-                </a>
-                <a href="#" className="text-gray-300 hover:text-red-600 transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
                   </svg>
                 </a>
               </div>
             </div>
           </div>
           
-          {/* Quick Links */}
+          {/* Quick Links - Based on the website sections from the text file */}
           <div>
             <h3 className="text-xl font-semibold text-white mb-4 border-b border-[#E46A16] pb-2 inline-block">Quick Links</h3>
             <ul className="space-y-2">
@@ -71,135 +65,99 @@ function Footer() {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#E46A16]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                  Admission Portal
+                  About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#E46A16] transition-colors flex items-center">
+                <a href="#academics" className="hover:text-[#E46A16] transition-colors flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#E46A16]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                  Academic Calendar
+                  Academics
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#E46A16] transition-colors flex items-center">
+                <a href="#admissions" className="hover:text-[#E46A16] transition-colors flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#E46A16]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                  Examination Schedule
+                  Admissions
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#E46A16] transition-colors flex items-center">
+                <a href="#student-life" className="hover:text-[#E46A16] transition-colors flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#E46A16]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                  Results
+                  Student Life & Campus Facilities
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#E46A16] transition-colors flex items-center">
+                <a href="#events" className="hover:text-[#E46A16] transition-colors flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#E46A16]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                  Student Portal
+                  Events & News
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#E46A16] transition-colors flex items-center">
+                <a href="#contact" className="hover:text-[#E46A16] transition-colors flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#E46A16]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                  Faculty Directory
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#E46A16] transition-colors flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#E46A16]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                  Career Opportunities
+                  Contact Us
                 </a>
               </li>
             </ul>
           </div>
           
-          {/* Important Information */}
+          {/* Location */}
           <div>
-            <h3 className="text-xl font-semibold text-white mb-4 border-b border-[#E46A16] pb-2 inline-block">Important Information</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="hover:text-[#E46A16] transition-colors flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#E46A16]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                  Anti-Ragging Committee
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#E46A16] transition-colors flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#E46A16]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                  Grievance Redressal
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#E46A16] transition-colors flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#E46A16]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                  RTI Information
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#E46A16] transition-colors flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#E46A16]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                  AISHE Data
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#E46A16] transition-colors flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#E46A16]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                  Gender Sensitization Committee
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#E46A16] transition-colors flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#E46A16]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                  NAAC Accreditation
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#E46A16] transition-colors flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#E46A16]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                  Annual Reports
-                </a>
-              </li>
-            </ul>
-          </div>
-          
-          {/* Location Map */}
-          <div>
-            <h3 className="text-xl font-semibold text-white mb-4 border-b border-[#E46A16] pb-2 inline-block">Find Us</h3>
-            <div className="bg-gray-700 h-48 rounded overflow-hidden">
-              {/* Replace with actual embedded map if available */}
-              <div className="h-full w-full flex items-center justify-center text-center">
-                <p className="text-sm">
-                  <span className="block mb-2">Interactive Map</span>
-                  <a href="https://www.google.com/maps/place/Mahatma+Gandhi+Mahavidyalaya/@21.6668973,86.9127673,12z/data=!4m6!3m5!1s0x3a1cf81bfe1ffe99:0xf8216fc3b45c8e82!8m2!3d21.6423711!4d86.9174119!16s%2Fg%2F119w_rsg0?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-[#E46A16] hover:underline">
+            <h3 className="text-xl font-semibold text-white mb-4 border-b border-[#E46A16] pb-2 inline-block">Our Location</h3>
+            <div className="bg-gray-700 rounded overflow-hidden">
+              <div className="p-4">
+                <p className="mb-4">
+                  MGHSS is located in Baisinga, which is:
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#E46A16] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>20 kilometers from Balasore</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#E46A16] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>12 kilometers from Betnoti Railway Station</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#E46A16] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>500 metres from Baisinga Bus Stand</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#E46A16] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>40 kilometers from Baripada</span>
+                  </li>
+                </ul>
+                <div className="mt-4">
+                  <a 
+                    href="https://www.google.com/maps/place/Mahatma+Gandhi+Mahavidyalaya/@21.6668973,86.9127673,12z/data=!4m6!3m5!1s0x3a1cf81bfe1ffe99:0xf8216fc3b45c8e82!8m2!3d21.6423711!4d86.9174119!16s%2Fg%2F119w_rsg0?entry=ttu" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-[#E46A16] hover:underline flex items-center"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
                     View on Google Maps
                   </a>
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -208,19 +166,17 @@ function Footer() {
         {/* Bottom footer area */}
         <div className="pt-6 mt-6 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm">
-              © {new Date().getFullYear()} Mahatma Gandhi Higher Secondary School, Baisinga. All rights reserved.
+            <p className="text-sm text-center md:text-left">
+              © {currentYear} Mahatma Gandhi Higher Secondary School, Baisinga. All rights reserved.
             </p>
-            <div className="mt-4 md:mt-0">
-              <ul className="flex space-x-4 text-sm">
-                <li><a href="#" className="hover:text-[#E46A16]">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-[#E46A16]">Terms of Use</a></li>
-                <li><a href="#" className="hover:text-[#E46A16]">Sitemap</a></li>
-              </ul>
+            <div className="mt-4 md:mt-0 text-sm text-center">
+              <p>
+                "Making every man a success and no man a failure"
+              </p>
             </div>
           </div>
           <p className="text-xs text-center mt-4 text-gray-400">
-            Designed & Developed by MGHSS IT Team | Last Updated: May 2, 2025
+            Established 1988 • Mayurbhanj, Odisha
           </p>
         </div>
       </div>

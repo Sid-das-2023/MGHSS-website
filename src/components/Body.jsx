@@ -1,46 +1,64 @@
 import React from 'react';
 import HeroSection from './HeroSection';
 import AboutUs from './AboutUs';
+import Academics from './Academics';
 // Import other section components as needed
 
 function Body() {
   return (
-    <div>
+    <main>
+      {/* Hero section doesn't need an ID as it's at the top */}
       <HeroSection />
       
       {/* Each section has its own ID that corresponds to the navbar links */}
-      <div id="admissions">
-        {/* Add your Admissions component or content here */}
-      </div>
-      
-      <div id="about-us">
+      <section id="about">
         <AboutUs />
-      </div>
+      </section>
       
-      <div id="academics">
-        {/* Add your Academics component or content here */}
-      </div>
+      <section id="academics">
+        <Academics />
+      </section>
       
-      <div id="research">
-        {/* Add your Research component or content here */}
-      </div>
+      <section id="admissions">
+        {/* Add your Admissions component here when ready */}
+        <div className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-[#201E3E]">Admissions</h2>
+            <p className="text-center mt-4">Coming soon...</p>
+          </div>
+        </div>
+      </section>
       
-      <div id="facilities">
-        {/* Add your Facilities component or content here */}
-      </div>
+      <section id="student-life">
+        {/* Add your Student Life component here when ready */}
+        <div className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-[#201E3E]">Student Life & Campus Facilities</h2>
+            <p className="text-center mt-4">Coming soon...</p>
+          </div>
+        </div>
+      </section>
       
-      <div id="examination">
-        {/* Add your Examination component or content here */}
-      </div>
+      <section id="events">
+        {/* Add your Events & News component here when ready */}
+        <div className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-[#201E3E]">Events & News</h2>
+            <p className="text-center mt-4">Coming soon...</p>
+          </div>
+        </div>
+      </section>
       
-      <div id="placement">
-        {/* Add your Placement component or content here */}
-      </div>
-      
-      <div id="others">
-        {/* Add your Others component or content here */}
-      </div>
-    </div>
+      <section id="contact">
+        {/* Add your Contact Us component here when ready */}
+        <div className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-[#201E3E]">Contact Us</h2>
+            <p className="text-center mt-4">Coming soon...</p>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
 
