@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // Import placeholder image for staff - replace with actual images later
-import placeholderImage from "../assets/staff_photos/placeholder-profile.jpg";
+import placeholderImage from "../assets/images/placeholder-profile.jpg";
 
 const imageModules = import.meta.glob("../assets/staff_photos/*.jpg", {
   eager: true,
@@ -12,6 +12,8 @@ for (const path in imageModules) {
   const filename = path.split("/").pop(); // e.g., Ajit_Ku_Parida.jpg
   staffImages[filename] = imageModules[path];
 }
+import placeholderImage from '../assets/placeholder-profile.jpg';
+
 function Academics() {
   // State for active tab
   const [activeTab, setActiveTab] = useState("programs");
@@ -361,7 +363,7 @@ function Academics() {
                     key={staff.id}
                     className="bg-white rounded-lg shadow overflow-hidden border border-gray-200"
                   >
-                    <div className="aspect-[1/1] overflow-hidden bg-gray-100">
+                    <div className="aspect-[3/4] overflow-hidden bg-gray-100">
                       <img
                         src={staffImages[staff.photoFileName]}
                         alt={staff.name}
@@ -409,7 +411,7 @@ function Academics() {
                     key={staff.id}
                     className="bg-white rounded-lg shadow overflow-hidden border border-gray-200"
                   >
-                    <div className="aspect-[1/1] overflow-hidden bg-gray-100">
+                    <div className="aspect-[3/4] overflow-hidden bg-gray-100">
                       <img
                         src={staffImages[staff.photoFileName]}
                         alt={staff.name}
@@ -452,7 +454,7 @@ function Academics() {
                     key={staff.id}
                     className="bg-white rounded-lg shadow overflow-hidden border border-gray-200"
                   >
-                    <div className="aspect-[1/1] overflow-hidden bg-gray-100">
+                    <div className="aspect-[3/4] overflow-hidden bg-gray-100">
                       <img
                         src={staffImages[staff.photoFileName]}
                         alt={staff.name}
