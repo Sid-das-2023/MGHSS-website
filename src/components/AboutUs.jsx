@@ -4,7 +4,7 @@ import collegeImage from '../assets/images/college.webp';
 import campus1 from '../assets/images/campus1.avif'; // Add your actual campus images
 import campus2 from '../assets/images/campus2.avif'; // Add your actual campus images
 import campus3 from '../assets/images/campus3.jpeg'; // Add your actual campus images
-
+import Birendra_Ku_Behera from '../assets/staff_photos/Birendra_Ku_Behera.jpg'; // Add your actual principal image
 function AboutUs() {
   // Add carousel state
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -171,7 +171,7 @@ function AboutUs() {
                 <div className="w-48 h-48 md:w-56 md:h-56 bg-gray-200 rounded-lg overflow-hidden shadow-md mb-4">
                   {/* Replace with actual image when available */}
                   <img 
-                    src="/path/to/principal-photo.jpg" 
+                    src="Birendra_Ku_Behera" 
                     alt="Sri Birendra Kumar Behera" 
                     className="w-full h-full object-cover"
                     onError={(e) => {
@@ -188,7 +188,7 @@ function AboutUs() {
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#201E3E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
-                    91-7978042992
+                    +91-7978042992
                   </p>
                 </div>
               </div>
