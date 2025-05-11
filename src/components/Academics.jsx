@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // Import placeholder image for staff - replace with actual images later
-import placeholderImage from '../assets/images/placeholder-profile.jpg';
+import placeholderImage from '../assets/placeholder-profile.jpg';
 
 function Academics() {
   // State for active tab
