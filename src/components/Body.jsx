@@ -45,11 +45,78 @@ function Body() {
       </section> */}
       
       <section id="contact">
-        {/* Add your Contact Us component here when ready */}
-        <div className="py-20 bg-white">
+        {/* Contact Us Section */}
+        <div className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center text-[#201E3E]">Contact Us</h2>
-            <p className="text-center mt-4">Coming soon...</p>
+            <h2 className="text-4xl font-bold text-center text-[#201E3E] mb-10">Contact Us</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-12">
+              {/* Contact Information */}
+              <div className="bg-[#201E3E] rounded-lg shadow-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4 border-b border-[#E46A16] pb-2 inline-block">Contact Information</h3>
+                <ul className="space-y-5">
+                  <li className="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 mt-0.5 text-[#E46A16] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <div className="text-gray-200">
+                      <p>Mahatma Gandhi Higher Secondary School</p>
+                      <p>At/Po- Baisinga</p>
+                      <p>Dist- Mayurbhanj</p>
+                      <p>Odisha- 757028</p>
+                    </div>
+                  </li>
+                  <li className="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#E46A16] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    <span className="text-gray-200">+91 9937135791</span>
+                  </li>
+                  <li className="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#E46A16] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    <span className="text-gray-200">+91 7978042992 (Principal)</span>
+                  </li>
+                </ul>
+                
+                {/* Social Media Links */}
+                <div className="mt-6">
+                  <h4 className="text-white font-medium mb-3">Connect With Us:</h4>
+                  <div className="flex space-x-4">
+                    <a 
+                      href="https://www.facebook.com/mg.mahavidyalaya" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-gray-300 hover:text-[#E46A16] transition-colors"
+                      aria-label="Facebook page"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Map Section with Correct Location */}
+            <div className="mt-12">
+              <h3 className="text-xl font-semibold text-[#201E3E] mb-4">Our Location</h3>
+              <div className="h-80 bg-gray-200 rounded-lg overflow-hidden">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.0082038999944!2d86.91522347499768!3d21.642371073936776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1cf81bfe1ffe99%3A0xf8216fc3b45c8e82!2sMahatma%20Gandhi%20Mahavidyalaya!5e0!3m2!1sen!2sin!4v1715456859024!5m2!1sen!2sin" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen="" 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Mahatma Gandhi Mahavidyalaya Location Map"
+                ></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </section>

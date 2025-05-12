@@ -3,6 +3,14 @@ import React from 'react';
 function Footer() {
   const currentYear = new Date().getFullYear();
   
+  // Function to handle smooth scrolling to sections
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
     <footer className="bg-[#201E3E] pt-12 pb-6 text-gray-300">
       <div className="container mx-auto px-4">
@@ -37,7 +45,7 @@ function Footer() {
               </li>
             </ul>
             
-            {/* Social Media Links - Only include the Facebook link from the text file */}
+            {/* Social Media Links */}
             <div className="mt-5">
               <h4 className="text-white font-medium mb-3">Connect With Us:</h4>
               <div className="flex space-x-4">
@@ -56,57 +64,64 @@ function Footer() {
             </div>
           </div>
           
-          {/* Quick Links - Based on the website sections from the text file */}
+          {/* Quick Links - Matches navbar */}
           <div>
             <h3 className="text-xl font-semibold text-white mb-4 border-b border-[#E46A16] pb-2 inline-block">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-[#E46A16] transition-colors flex items-center">
+                <button 
+                  onClick={() => scrollToSection('about')}
+                  className="text-left w-full hover:text-[#E46A16] transition-colors flex items-center"
+                >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#E46A16]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                  About Us
-                </a>
+                  About
+                </button>
               </li>
               <li>
-                <a href="#academics" className="hover:text-[#E46A16] transition-colors flex items-center">
+                <button 
+                  onClick={() => scrollToSection('academics')}
+                  className="text-left w-full hover:text-[#E46A16] transition-colors flex items-center"
+                >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#E46A16]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                   Academics
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#admissions" className="hover:text-[#E46A16] transition-colors flex items-center">
+                <button 
+                  onClick={() => scrollToSection('admissions')}
+                  className="text-left w-full hover:text-[#E46A16] transition-colors flex items-center"
+                >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#E46A16]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                   Admissions
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#student-life" className="hover:text-[#E46A16] transition-colors flex items-center">
+                <button 
+                  onClick={() => scrollToSection('student-life')}
+                  className="text-left w-full hover:text-[#E46A16] transition-colors flex items-center"
+                >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#E46A16]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                  Student Life & Campus Facilities
-                </a>
+                  Student Life
+                </button>
               </li>
               <li>
-                <a href="#events" className="hover:text-[#E46A16] transition-colors flex items-center">
+                <button 
+                  onClick={() => scrollToSection('contact')}
+                  className="text-left w-full hover:text-[#E46A16] transition-colors flex items-center"
+                >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#E46A16]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                  Events & News
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-[#E46A16] transition-colors flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#E46A16]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                  Contact Us
-                </a>
+                  Contact
+                </button>
               </li>
             </ul>
           </div>
@@ -147,7 +162,7 @@ function Footer() {
                 </ul>
                 <div className="mt-4">
                   <a 
-                    href="https://www.google.com/maps/place/Mahatma+Gandhi+Mahavidyalaya/@21.6668973,86.9127673,12z/data=!4m6!3m5!1s0x3a1cf81bfe1ffe99:0xf8216fc3b45c8e82!8m2!3d21.6423711!4d86.9174119!16s%2Fg%2F119w_rsg0?entry=ttu" 
+                    href="https://www.google.com/maps/place/Mahatma+Gandhi+Mahavidyalaya/@21.6423711,86.9174119,15z/data=!4m6!3m5!1s0x3a1cf81bfe1ffe99:0xf8216fc3b45c8e82!8m2!3d21.6423711!4d86.9174119!16s%2Fg%2F119w_rsg0?entry=ttu" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="text-[#E46A16] hover:underline flex items-center"

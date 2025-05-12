@@ -204,7 +204,7 @@ function Navbar() {
             >
               <div className="flex items-center justify-between">
                 <button 
-                  onClick={() => scrollToSection('about-us')} 
+                  onClick={() => scrollToSection('about')} 
                   className="text-left text-gray-100 hover:text-[#E46A16] transition duration-300 uppercase font-weight-500 block py-1 md:py-0"
                 >
                   About Us
@@ -317,7 +317,7 @@ function Navbar() {
             >
               <div className="flex items-center justify-between">
                 <button 
-                  onClick={() => scrollToSection('facilities')} 
+                  onClick={() => scrollToSection('student-life')} 
                   className="text-left text-gray-100 hover:text-[#E46A16] transition duration-300 uppercase font-weight-500 block py-1 md:py-0"
                 >
                   Campus Life
