@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // Import placeholder image for staff - replace with actual images later
-import placeholderImage from "../assets/images/placeholder-profile.jpg";
+import placeholderImage from "../assets/staff_photos/placeholder-profile.jpg";
 
 const imageModules = import.meta.glob("../assets/staff_photos/*.jpg", {
   eager: true,
