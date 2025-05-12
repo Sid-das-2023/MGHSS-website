@@ -362,7 +362,7 @@ function Academics() {
                     key={staff.id}
                     className="bg-white rounded-lg shadow overflow-hidden border border-gray-200"
                   >
-                    <div className="aspect-[3/4] overflow-hidden bg-gray-100">
+                    <div className="aspect-[1/1] overflow-hidden bg-gray-100">
                       <img
                         src={staffImages[staff.photoFileName]}
                         alt={staff.name}
@@ -410,7 +410,7 @@ function Academics() {
                     key={staff.id}
                     className="bg-white rounded-lg shadow overflow-hidden border border-gray-200"
                   >
-                    <div className="aspect-[3/4] overflow-hidden bg-gray-100">
+                    <div className="aspect-[1/1] overflow-hidden bg-gray-100">
                       <img
                         src={staffImages[staff.photoFileName]}
                         alt={staff.name}
@@ -453,7 +453,7 @@ function Academics() {
                     key={staff.id}
                     className="bg-white rounded-lg shadow overflow-hidden border border-gray-200"
                   >
-                    <div className="aspect-[3/4] overflow-hidden bg-gray-100">
+                    <div className="aspect-[1/1] overflow-hidden bg-gray-100">
                       <img
                         src={staffImages[staff.photoFileName]}
                         alt={staff.name}
