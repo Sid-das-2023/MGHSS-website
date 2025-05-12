@@ -166,12 +166,10 @@ function AboutUs() {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-white text-center">Message from the Principal</h2>
           <div className="max-w-7xl py-5 mx-auto">
             <div className="flex flex-col md:flex-row gap-8">
-              {/* Principal's photo section - larger and more prominent */}
               <div className="md:w-1/3 flex flex-col items-center">
-                <div className="w-48 h-48 md:w-56 md:h-56 bg-gray-200 rounded-lg overflow-hidden shadow-md mb-4">
-                  {/* Replace with actual image when available */}
+                <div className="w-48 h-56 md:w-56 md:h-72 bg-gray-200 rounded-lg overflow-hidden shadow-md mb-4 object-center">
                   <img 
-                    src="Birendra_Ku_Behera" 
+                    src={Birendra_Ku_Behera} 
                     alt="Sri Birendra Kumar Behera" 
                     className="w-full h-full object-cover"
                     onError={(e) => {
