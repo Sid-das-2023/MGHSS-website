@@ -46,134 +46,133 @@ function Academics() {
 
   // Staff information from the content file
   const staffMembers = [
-  {
-    id: 1,
-    name: "Mr. Birendra Ku. Behera",
-    designation: "Principal-cum-Reader",
-    department: "English",
-    photoFileName: "Birendra_Ku_Behera.jpg",
-  },
-  {
-    id: 2,
-    name: "Mrs. Minakshi Das",
-    designation: "Lecturer",
-    department: "Psychology",
-    photoFileName: "Minakshi_Das.jpg",
-  },
-  {
-    id: 3,
-    name: "Mr. Mahendra Ku. Kar",
-    designation: "Lecturer",
-    department: "History",
-    photoFileName: "Mahendra_Ku_Kar.jpg",
-  },
-  {
-    id: 4,
-    name: "Mr. Subas Chandra Mohapatra",
-    designation: "Lecturer",
-    department: "Economics",
-    photoFileName: "Subas_Ch_Mohapatra.jpg",
-  },
-  {
-    id: 5,
-    name: "Mr. Bijay Ku. Tripathy",
-    designation: "Lecturer",
-    department: "Political Science",
-    photoFileName: "Bijay_Ku_Tripathy.jpg",
-  },
-  {
-    id: 6,
-    name: "Mr. Debabrata Rout",
-    designation: "Reader",
-    department: "Physics",
-    photoFileName: "Debabrata_Rout.jpg",
-  },
-  {
-    id: 7,
-    name: "Mrs. Bansori Das",
-    designation: "Reader",
-    department: "Botany",
-    photoFileName: "Bansori_Das.jpg",
-  },
-  {
-    id: 8,
-    name: "Dr. Harekrushna Behera",
-    designation: "Lecturer",
-    department: "History",
-    photoFileName: "Harekrushna_Behera.jpg",
-  },
-  {
-    id: 9,
-    name: "Ms. Puspapriya Mohalik",
-    designation: "P.G.T",
-    department: "Odia",
-    photoFileName: "Puspapriya_Mohalik.jpg",
-  },
-  {
-    id: 10,
-    name: "Mr. Jitendra Khatua",
-    designation: "P.G.T",
-    department: "Political Science",
-    photoFileName: "Jitendra_Khatua.jpg",
-  },
-  {
-    id: 11,
-    name: "Ms. Subhashree Das",
-    designation: "P.G.T",
-    department: "Education",
-    photoFileName: "Subhashree_Das.jpg",
-  },
-  {
-    id: 12,
-    name: "Mr. Sanyashi Nayak",
-    designation: "Demonstrator",
-    department: "Physics",
-    photoFileName: "Sanyasi_Nayak.jpg",
-  },
-  {
-    id: 13,
-    name: "Mr. Binendra Ku. Mohanta",
-    designation: "Demonstrator",
-    department: "Chemistry",
-    photoFileName: "Binendra_Ku_Mohanta.jpg",
-  },
-  {
-    id: 14,
-    name: "Mr. Laxmidhar Gantayat",
-    designation: "Demonstrator",
-    department: "Psychology",
-    photoFileName: "Laxmidhar_Gantayat.jpg",
-  },
-  {
-    id: 15,
-    name: "Parameswar Behera",
-    designation: "D.E.O",
-    department: "SAMS",
-    photoFileName: "Parameswar_Behera.jpg",
-  },
-  {
-    id: 16,
-    name: "Panchanan Das",
-    designation: "Lab. Attendant",
-    department: "Biology",
-    photoFileName: "Panchanan_Das.jpg",
-  },
-  {
-    id: 17,
-    name: "Ajit Ku. Parida",
-    designation: "Attendant",
-    department: "Library",
-    photoFileName: "Ajit_Ku_Parida.jpg",
-  },
-  {
-    id: 18,
-    name: "Sarat Chandra Mohanta",
-    designation: "Peon",
-    department: "Office",
-    photoFileName: "Sarat_Ch_Mohanta.jpg",
-  },
-];
-
+    {
+      id: 1,
+      name: "Mr. Birendra Ku. Behera",
+      designation: "Principal-cum-Reader",
+      department: "English",
+      photoFileName: "Birendra_Ku_Behera.jpg",
+    },
+    {
+      id: 2,
+      name: "Mrs. Minakshi Das",
+      designation: "Lecturer",
+      department: "Psychology",
+      photoFileName: "Minakshi_Das.jpg",
+    },
+    {
+      id: 3,
+      name: "Mr. Mahendra Ku. Kar",
+      designation: "Lecturer",
+      department: "History",
+      photoFileName: "Mahendra_Ku_Kar.jpg",
+    },
+    {
+      id: 4,
+      name: "Mr. Subas Chandra Mohapatra",
+      designation: "Lecturer",
+      department: "Economics",
+      photoFileName: "Subas_Ch_Mohapatra.jpg",
+    },
+    {
+      id: 5,
+      name: "Mr. Bijay Ku. Tripathy",
+      designation: "Lecturer",
+      department: "Political Science",
+      photoFileName: "Bijay_Ku_Tripathy.jpg",
+    },
+    {
+      id: 6,
+      name: "Mr. Debabrata Rout",
+      designation: "Reader",
+      department: "Physics",
+      photoFileName: "Debabrata_Rout.jpg",
+    },
+    {
+      id: 7,
+      name: "Mrs. Bansori Das",
+      designation: "Reader",
+      department: "Botany",
+      photoFileName: "Bansori_Das.jpg",
+    },
+    {
+      id: 8,
+      name: "Dr. Harekrushna Behera",
+      designation: "Lecturer",
+      department: "History",
+      photoFileName: "Harekrushna_Behera.jpg",
+    },
+    {
+      id: 9,
+      name: "Ms. Puspapriya Mohalik",
+      designation: "P.G.T",
+      department: "Odia",
+      photoFileName: "Puspapriya_Mohalik.jpg",
+    },
+    {
+      id: 10,
+      name: "Mr. Jitendra Khatua",
+      designation: "P.G.T",
+      department: "Political Science",
+      photoFileName: "Jitendra_Khatua.jpg",
+    },
+    {
+      id: 11,
+      name: "Ms. Subhashree Das",
+      designation: "P.G.T",
+      department: "Education",
+      photoFileName: "Subhashree_Das.jpg",
+    },
+    {
+      id: 12,
+      name: "Mr. Sanyashi Nayak",
+      designation: "Demonstrator",
+      department: "Physics",
+      photoFileName: "Sanyasi_Nayak.jpg",
+    },
+    {
+      id: 13,
+      name: "Mr. Binendra Ku. Mohanta",
+      designation: "Demonstrator",
+      department: "Chemistry",
+      photoFileName: "Binendra_Ku_Mohanta.jpg",
+    },
+    {
+      id: 14,
+      name: "Mr. Laxmidhar Gantayat",
+      designation: "Demonstrator",
+      department: "Psychology",
+      photoFileName: "Laxmidhar_Gantayat.jpg",
+    },
+    {
+      id: 15,
+      name: "Parameswar Behera",
+      designation: "D.E.O",
+      department: "SAMS",
+      photoFileName: "Parameswar_Behera.jpg",
+    },
+    {
+      id: 16,
+      name: "Panchanan Das",
+      designation: "Lab. Attendant",
+      department: "Biology",
+      photoFileName: "Panchanan_Das.jpg",
+    },
+    {
+      id: 17,
+      name: "Ajit Ku. Parida",
+      designation: "Attendant",
+      department: "Library",
+      photoFileName: "Ajit_Ku_Parida.jpg",
+    },
+    {
+      id: 18,
+      name: "Sarat Chandra Mohanta",
+      designation: "Peon",
+      department: "Office",
+      photoFileName: "Sarat_Ch_Mohanta.jpg",
+    },
+  ];
 
   // Filter faculty by role categories for organized display
   const teachingStaff = staffMembers.filter((staff) =>
@@ -717,19 +716,48 @@ function Academics() {
             Our academic counselors are available to help you navigate our
             programs and find the right fit for your educational goals.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a
-              href="#"
-              className="inline-block bg-[#E46A16] text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition duration-300"
-            >
-              Contact Academic Office
-            </a>
-            <a
-              href="#"
-              className="inline-block bg-transparent border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-[#201E3E] transition duration-300"
-            >
-              Schedule a Visit
-            </a>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
+            <div className="flex items-center text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8 mr-3 text-[#E46A16]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+              <div className="text-left">
+                <p className="text-sm text-gray-300">General Inquiries</p>
+                <p className="text-lg font-medium">+91 9937135791</p>
+              </div>
+            </div>
+
+            <div className="flex items-center text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8 mr-3 text-[#E46A16]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+              <div className="text-left">
+                <p className="text-sm text-gray-300">Principal's Office</p>
+                <p className="text-lg font-medium">+91 7978042992</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

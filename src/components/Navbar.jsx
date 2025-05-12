@@ -5,7 +5,7 @@ import logo from "../assets/logo.png";
 function Navbar() {
   // Array of alert messages to display in rotation
   const alertMessages = [
-    "🔔 Important Announcement: Admissions for 2024-25 Academic Year are now open! Last date to apply is June 30th, 2024.",
+    "🔔 Important Announcement: Admissions for 2025-26 Academic Year are now open!",
     "📚 New Science Laboratory equipment has arrived! Students can now access advanced learning tools.",
     "🏆 Congratulations to our students for winning the district-level science competition!",
     "📅 Parent-Teacher Meeting scheduled for May 15th, 2024. All parents are requested to attend.",

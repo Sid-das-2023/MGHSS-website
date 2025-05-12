@@ -21,11 +21,153 @@ function Body() {
       </section>
       
       <section id="admissions">
-        {/* Add your Admissions component here when ready */}
         <div className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center text-[#201E3E]">Admissions</h2>
-            <p className="text-center mt-4">Coming soon...</p>
+            <h2 className="text-4xl font-bold text-center text-[#201E3E] mb-2">Admissions</h2>
+            <div className="w-24 h-1 bg-[#E46A16] mx-auto mb-8"></div>
+            
+            <div className="max-w-4xl mx-auto">
+              <p className="text-lg text-center text-gray-600 mb-12">
+                To secure admission at Mahatma Gandhi Higher Secondary School in Baisinga, please follow the process outlined below.
+              </p>
+              
+              {/* Admissions Process Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <div className="bg-white rounded-lg shadow-md overflow-hidden border-t-4 border-[#E46A16] hover:shadow-lg transition-shadow">
+                  <div className="p-6">
+                    <div className="flex items-center mb-4">
+                      <div className="bg-[#201E3E] w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                        <span className="text-white font-bold">1</span>
+                      </div>
+                      <h3 className="text-xl font-bold text-[#201E3E]">Application</h3>
+                    </div>
+                    <p className="text-gray-600">
+                      Complete the admission application form provided by the school. Ensure all fields are filled accurately and attach all required documents as specified.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="bg-white rounded-lg shadow-md overflow-hidden border-t-4 border-[#E46A16] hover:shadow-lg transition-shadow">
+                  <div className="p-6">
+                    <div className="flex items-center mb-4">
+                      <div className="bg-[#201E3E] w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                        <span className="text-white font-bold">2</span>
+                      </div>
+                      <h3 className="text-xl font-bold text-[#201E3E]">Merit-Based Selection</h3>
+                    </div>
+                    <p className="text-gray-600">
+                      Admissions are granted based on academic merit. The school will publish a merit list following government guidelines. Check the notice board or website for results.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="bg-white rounded-lg shadow-md overflow-hidden border-t-4 border-[#E46A16] hover:shadow-lg transition-shadow">
+                  <div className="p-6">
+                    <div className="flex items-center mb-4">
+                      <div className="bg-[#201E3E] w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                        <span className="text-white font-bold">3</span>
+                      </div>
+                      <h3 className="text-xl font-bold text-[#201E3E]">Time-Sensitive Process</h3>
+                    </div>
+                    <p className="text-gray-600">
+                      Upon selection in the merit list, complete the admission formalities within the specified timeframe. Missing the deadline may result in forfeiting your seat.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="bg-white rounded-lg shadow-md overflow-hidden border-t-4 border-[#E46A16] hover:shadow-lg transition-shadow">
+                  <div className="p-6">
+                    <div className="flex items-center mb-4">
+                      <div className="bg-[#201E3E] w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                        <span className="text-white font-bold">4</span>
+                      </div>
+                      <h3 className="text-xl font-bold text-[#201E3E]">Final Decision</h3>
+                    </div>
+                    <p className="text-gray-600">
+                      Choose your subjects carefully as changes to subjects or courses are not permitted after the admission process is complete, in accordance with school policy.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Required Documents Section */}
+              <div className="bg-[#201E3E] rounded-lg shadow-lg p-6 text-white">
+                <h3 className="text-2xl font-bold mb-4 border-b border-[#E46A16] pb-2 inline-block">Required Documents</h3>
+                <ul className="mt-4 space-y-3">
+                  <li className="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 mt-0.5 text-[#E46A16] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Completed application form</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 mt-0.5 text-[#E46A16] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Previous school marks statement or transfer certificate</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 mt-0.5 text-[#E46A16] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Character certificate</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 mt-0.5 text-[#E46A16] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Recent passport-sized photographs</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 mt-0.5 text-[#E46A16] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Proof of residence/address</span>
+                  </li>
+                </ul>
+                
+                <div className="mt-8 bg-[#2a294d] p-4 rounded-lg">
+                  <div className="flex items-center mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-[#E46A16]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <h4 className="text-lg font-semibold">Important Note</h4>
+                  </div>
+                  <p className="text-gray-300">
+                    For the most current admission updates, please contact the school office or check our notice board. Admission procedures may vary based on government regulations.
+                  </p>
+                </div>
+              </div>
+              
+              {/* Contact for Admissions 
+              <div className="mt-12 text-center">
+                <h3 className="text-2xl font-semibold text-[#201E3E] mb-4">Have Questions About Admissions?</h3>
+                <p className="text-gray-600 mb-6">
+                  Our admissions team is here to help guide you through the process.
+                </p>
+                <div className="flex justify-center space-x-4">
+                  <a 
+                    href="tel:+919937135791" 
+                    className="bg-[#201E3E] text-white px-6 py-3 rounded-md hover:bg-[#33316a] transition-colors flex items-center"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    Call Us
+                  </a>
+                  <button 
+                    onClick={() => scrollToSection('contact')} 
+                    className="bg-[#E46A16] text-white px-6 py-3 rounded-md hover:bg-[#d15a10] transition-colors flex items-center"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    Contact Us
+                  </button>
+                </div>
+              </div>
+              */}
+            </div>
           </div>
         </div>
       </section>

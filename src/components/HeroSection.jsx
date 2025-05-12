@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import image1 from "../assets/images/International Women's Day Celebration.jpg";
-import image2 from '../assets/images/Audio-vidual Classes.jpg';
-import image3 from '../assets/images/Campus Cleaning by NSS Warriors.jpg';
-import image4 from '../assets/images/Block Level Winer Dance Group.jpg';
+import image2 from '../assets/images/Felicitation of our respected Principal Sir.jpg';
+import image3 from '../assets/images/Audio-vidual Classes.jpg';
+import image4 from '../assets/images/Campus Cleaning by NSS Warriors.jpg';
+import image5 from '../assets/images/Block Level Winer Dance Group.jpg';
 
 function HeroSection() {
   const images = [
@@ -12,14 +13,18 @@ function HeroSection() {
     },
     {
       url: image2,
-      caption: 'Audio-Visual Classes',
+      caption: "Felicitation of our respected Principal Sir",
     },
     {
       url: image3,
-      caption: 'Campus Cleaning by NSS Warriors',
+      caption: 'Audio-Visual Classes',
     },
     {
       url: image4,
+      caption: 'Campus Cleaning by NSS Warriors',
+    },
+    {
+      url: image5,
       caption: 'Block Level Winner Dance Group',
     },
   ];
@@ -35,7 +40,7 @@ function HeroSection() {
 
   return (
     <>
-      <div className="relative h-[300px] sm:h-[400px] md:h-[500px] overflow-hidden">
+      <div className="relative h-[240px] sm:h-[500px] md:h-[650px] overflow-hidden">
         {images.map((image, index) => (
           <div
             key={index}
