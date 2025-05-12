@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import image1 from '../assets/images/AIDS Awareness Programme by Redcross.jpg';
+import image1 from "../assets/images/International Women's Day Celebration.jpg";
 import image2 from '../assets/images/Audio-vidual Classes.jpg';
-import image3 from '../assets/images/Bidding Best of Luck to Board students.jpg';
+import image3 from '../assets/images/Campus Cleaning by NSS Warriors.jpg';
 import image4 from '../assets/images/Block Level Winer Dance Group.jpg';
 
 function HeroSection() {
   const images = [
     {
       url: image1,
-      caption: 'AIDS Awareness Programme by Redcross',
+      caption: "International Women's Day Celebration",
     },
     {
       url: image2,
@@ -16,7 +16,7 @@ function HeroSection() {
     },
     {
       url: image3,
-      caption: 'Bidding Best of Luck to Board Students',
+      caption: 'Campus Cleaning by NSS Warriors',
     },
     {
       url: image4,

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useLocation, Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 function Navbar() {
   // Array of alert messages to display in rotation
@@ -138,18 +139,18 @@ function Navbar() {
           {/* College Logo and Name */}
           <div className="flex items-center">
             <div className="mr-3">
-              <div className="w-15 h-15 md:w-18 md:h-18 bg-gray-100 rounded-full flex items-center justify-center gap-3">
-                <span className="text-[#201E3E] font-bold text-base md:text-lg">
-                  MGHSS
-                </span>
-              </div>
+              <img 
+                src={logo} 
+                alt="MGHSS Logo" 
+                className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover"
+              />
             </div>
             <div>
-              <h1 className="text-xl md:text-2xl font-bold text-gray-100 text-center md:text-left">
-                Mahatma Gandhi Higher Secondary School
+              <h1 className="text-xl md:text-3xl font-bold text-gray-100 text-center md:text-left">
+                Mahatma Gandhi Higher Secondary School Baisinga
               </h1>
-              <p className="text-xs md:text-sm text-gray-300 text-center md:text-left">
-                Baisinga, Established in 1988
+              <p className="text-xs md:text-sm text-gray-300 text-center md:text-left font-bold">
+                Mayurbhanj, Established in 1988
               </p>
             </div>
           </div>
