@@ -147,7 +147,7 @@ function Navbar() {
             </div>
             <div>
               <h1 className="text-xl md:text-3xl font-bold text-gray-100 text-center md:text-left">
-                Mahatma Gandhi Higher Secondary School Baisinga
+                Mahatma Gandhi Higher Secondary School, Baisinga
               </h1>
               <p className="text-xs md:text-sm text-gray-300 text-center md:text-left font-bold">
                 Mayurbhanj, Established in 1988
