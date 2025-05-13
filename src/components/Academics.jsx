@@ -161,7 +161,7 @@ function Academics() {
     {
       id: 17,
       name: "Ajit Ku. Parida",
-      designation: "Librarian",
+      designation: "Library Attendant",
       department: "Library",
       photoFileName: "Ajit_Ku_Parida.jpg",
     },
@@ -182,7 +182,7 @@ function Academics() {
   );
 
   const laboratoryStaff = staffMembers.filter((staff) =>
-    ["Demonstrator", "Lab. Attendant", "Librarian"].includes(staff.designation)
+    ["Demonstrator", "Lab. Attendant", "Library Attendant"].includes(staff.designation)
   );
 
   const administrativeStaff = staffMembers.filter((staff) =>
