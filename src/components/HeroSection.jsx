@@ -1,30 +1,35 @@
 import React, { useState, useEffect } from 'react';
-import image1 from "../assets/images/International Women's Day Celebration.jpg";
-import image2 from '../assets/images/Felicitation of our respected Principal Sir.jpg';
-import image3 from '../assets/images/Audio-vidual Classes.jpg';
-import image4 from '../assets/images/Campus Cleaning by NSS Warriors.jpg';
-import image5 from '../assets/images/Block Level Winer Dance Group.jpg';
+import image1 from "../assets/images/Principal with staff & Students.jpg";
+import image2 from "../assets/images/International Women's Day Celebration.jpg";
+import image3 from '../assets/images/Felicitation of our respected Principal Sir.jpg';
+import image4 from '../assets/images/Audio-vidual Classes.jpg';
+import image5 from '../assets/images/Sports Day Celebration.jpg';
+import image6 from '../assets/images/Block Level Winer Dance Group.jpg';
 
 function HeroSection() {
   const images = [
     {
       url: image1,
-      caption: "International Women's Day Celebration",
+      caption: "Principal with staff & Students",
     },
     {
       url: image2,
-      caption: "Felicitation of our respected Principal Sir",
+      caption: "International Women's Day Celebration",
     },
     {
       url: image3,
-      caption: 'Audio-Visual Classes',
+      caption: "Felicitation of our respected Principal Sir",
     },
     {
       url: image4,
-      caption: 'Campus Cleaning by NSS Warriors',
+      caption: 'Audio-Visual Classes',
     },
     {
       url: image5,
+      caption: 'Sports Day Celebration',
+    },
+    {
+      url: image6,
       caption: 'Block Level Winner Dance Group',
     },
   ];

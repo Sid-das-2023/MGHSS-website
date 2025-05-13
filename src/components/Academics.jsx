@@ -38,7 +38,7 @@ function Academics() {
     {
       name: "+2 Science",
       description:
-        "The Science stream provides students with a strong foundation in scientific principles and analytical thinking skills, preparing them for future studies in STEM fields.",
+        "The Science stream provides students with a strong foundation in scientific principles and analytical thinking skills. The curriculum includes compulsory subjects like English and MIL (Odia or Hindi), along with core science subjects, preparing students for future studies in STEM fields.",
       subjects: ["Physics", "Chemistry", "Mathematics", "Biology"],
       seats: 64,
     },
@@ -161,14 +161,14 @@ function Academics() {
     {
       id: 17,
       name: "Ajit Ku. Parida",
-      designation: "Attendant",
+      designation: "Librarian",
       department: "Library",
       photoFileName: "Ajit_Ku_Parida.jpg",
     },
     {
       id: 18,
       name: "Sarat Chandra Mohanta",
-      designation: "Peon",
+      designation: "Office Attendant",
       department: "Office",
       photoFileName: "Sarat_Ch_Mohanta.jpg",
     },
@@ -182,11 +182,11 @@ function Academics() {
   );
 
   const laboratoryStaff = staffMembers.filter((staff) =>
-    ["Demonstrator", "Lab. Attendant"].includes(staff.designation)
+    ["Demonstrator", "Lab. Attendant", "Librarian"].includes(staff.designation)
   );
 
   const administrativeStaff = staffMembers.filter((staff) =>
-    ["D.E.O", "Lib. Attendant", "Peon"].includes(staff.designation)
+    ["D.E.O", "Office Attendant"].includes(staff.designation)
   );
 
   return (
@@ -444,7 +444,7 @@ function Academics() {
             {/* Administrative Staff Section */}
             <div>
               <h3 className="text-xl font-bold text-[#201E3E] mb-6 pb-2 border-b border-gray-200">
-                Administrative Staff
+                Office Staff
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {administrativeStaff.map((staff) => (
