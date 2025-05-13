@@ -71,12 +71,12 @@ function AboutUs() {
             </div>
             
             {/* Image on the right for desktop (but on top for mobile) */}
-            <div className="md:w-2/5 mb-6 md:mb-0">
-              <div className="rounded-lg overflow-hidden shadow-xl h-full">
+            <div className="md:w-2/5 mb-6 md:mt-30">
+              <div className="rounded-lg overflow-hidden shadow-xl">
                 <img 
                   src={collegeImage} 
                   alt="Mahatma Gandhi Higher Secondary School Campus" 
-                  className="w-full h-full object-fit"
+                  className="w-full h-[70%] object-fit"
                 />
               </div>
             </div>
